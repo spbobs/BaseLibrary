@@ -47,3 +47,7 @@ dependencies {
     implementation deps.rxjava2
 
 }
+
+repositories {
+    mavenCentral()
+}
