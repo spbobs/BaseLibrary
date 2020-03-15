@@ -45,6 +45,7 @@ dependencies {
     implementation deps.gson
     implementation deps.lifecycle.extensions
     implementation deps.rxjava2
+    implementation deps.logger
 
 }
 
