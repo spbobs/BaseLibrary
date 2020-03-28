@@ -8,8 +8,8 @@ fun AppCompatActivity.replaceFragment(targetFragment: Fragment, fragResID: Int) 
     supportFragmentManager.beginTransaction().replace(fragResID, targetFragment).commit()
 }
 
-fun AppCompatActivity.addFragment(targetFragment: Fragment, fragResID: Int) {
-    supportFragmentManager.beginTransaction().add(fragResID, targetFragment).commit()
+fun AppCompatActivity.addFragment(targetFragment: Fragment, fragResID: Int, tag: String) {
+    supportFragmentManager.beginTransaction().add(fragResID, targetFragment, tag).commit()
 }
 
 fun AppCompatActivity.removeFragment(targetFragment: Fragment) {

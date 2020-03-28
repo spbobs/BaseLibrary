@@ -23,23 +23,23 @@ abstract class BaseFragment<T: ViewDataBinding> : Fragment() {
         return viewDataBinding.root
     }
 
-    fun showLoading() {
-        val baseActivity = activity as BaseActivity<*>
-        baseActivity.showLoading()
-    }
-
-    fun hideLoading() {
-        val baseActivity = activity as BaseActivity<*>
-        baseActivity.hideLoading()
-    }
-
-    fun showKeyboard() {
-        val baseActivity = activity as BaseActivity<*>
-        baseActivity.showKeyboard()
-    }
-
-    fun hideKeyboard() {
-        val baseActivity = activity as BaseActivity<*>
-        baseActivity.hideKeyboard()
-    }
+//    fun showLoading() {
+//        val baseActivity = activity as BaseActivity<*>
+//        baseActivity.showLoading()
+//    }
+//
+//    fun hideLoading() {
+//        val baseActivity = activity as BaseActivity<*>
+//        baseActivity.hideLoading()
+//    }
+//
+//    fun showKeyboard() {
+//        val baseActivity = activity as BaseActivity<*>
+//        baseActivity.showKeyboard()
+//    }
+//
+//    fun hideKeyboard() {
+//        val baseActivity = activity as BaseActivity<*>
+//        baseActivity.hideKeyboard()
+//    }
 }
