@@ -13,7 +13,6 @@ android {
         versionCode build_versions.versionCode
         versionName build_versions.versionName
 
-        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -21,9 +20,6 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        debug{
-            debuggable true
         }
     }
 
@@ -41,12 +37,12 @@ dependencies {
     implementation deps.kotlin.stdlib
     implementation deps.app_compat
     implementation deps.core_ktx
-    implementation deps.koin
-    implementation deps.gson
     implementation deps.lifecycle.extensions
     implementation deps.rxjava2
+    implementation deps.rx_android
+    implementation deps.constraint_layout
     implementation deps.logger
-
+    implementation deps.gson
 }
 
 repositories {

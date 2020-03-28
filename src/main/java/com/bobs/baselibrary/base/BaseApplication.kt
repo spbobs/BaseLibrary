@@ -1,8 +1,10 @@
 package com.bobs.baselibrary.base
 
 import android.app.Application
+import android.content.pm.ApplicationInfo
+import android.content.pm.PackageManager
 
-open class BaseApplication : Application(){
+open class BaseApplication : Application() {
     fun isDebuggable(): Boolean {
         var debuggable = false
 
@@ -17,3 +19,4 @@ open class BaseApplication : Application(){
         return debuggable
     }
 }
+
