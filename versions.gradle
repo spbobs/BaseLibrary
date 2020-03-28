@@ -67,7 +67,6 @@ ext.build_versions = build_versions
 
 def deps = [:]
 
-// https://developer.android.com/jetpack/androidx/releases/activity
 def activity = [:]
 activity.activity_ktx = "androidx.activity:activity-ktx:$versions.activity"
 deps.activity = activity
