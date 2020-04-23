@@ -34,25 +34,25 @@ private inline fun<T> SharedPreferences.delegate(
 }
 
 fun SharedPreferences.int(key: String? = null, defValue: Int = 0): ReadWriteProperty<Any, Int> {
-    return delegate(key, defValue, SharedPreferences::getInt, SharedPreferences.Editor::putInt)
+    return delegate(key, defValue, SharedPreferences::getInt, Editor::putInt)
 }
 
 fun SharedPreferences.long(key: String? = null, defValue: Long = 0): ReadWriteProperty<Any, Long> {
-    return delegate(key, defValue, SharedPreferences::getLong, SharedPreferences.Editor::putLong)
+    return delegate(key, defValue, SharedPreferences::getLong, Editor::putLong)
 }
 
 fun SharedPreferences.float(key: String? = null, defValue: Float = 0f): ReadWriteProperty<Any, Float> {
-    return delegate(key, defValue, SharedPreferences::getFloat, SharedPreferences.Editor::putFloat)
+    return delegate(key, defValue, SharedPreferences::getFloat, Editor::putFloat)
 }
 
-fun SharedPreferences.boolean(key: String? = null, defValue: Boolean = false) : ReadWriteProperty<Any, Boolean>{
-    return delegate(key, defValue, SharedPreferences::getBoolean, SharedPreferences.Editor::putBoolean)
+fun SharedPreferences.boolean(key: String? = null, defValue: Boolean = false): ReadWriteProperty<Any, Boolean> {
+    return delegate(key, defValue, SharedPreferences::getBoolean, Editor::putBoolean)
 }
 
 fun SharedPreferences.stringSet(key: String? = null, defValue: Set<String> = emptySet()): ReadWriteProperty<Any, Set<String>> {
-    return delegate(key, defValue, { it, set -> getStringSet(it, set) as Set<String> }, SharedPreferences.Editor::putStringSet)
+    return delegate(key, defValue, { it, set -> getStringSet(it, set) as Set<String> }, Editor::putStringSet)
 }
 
 fun SharedPreferences.string(key: String? = null, defValue: String = ""): ReadWriteProperty<Any, String> {
-    return delegate(key, defValue, { str1, str2 -> getString(str1, str2) as String }, SharedPreferences.Editor::putString)
+    return delegate(key, defValue, { str1, str2 -> getString(str1, str2) as String }, Editor::putString)
 }
