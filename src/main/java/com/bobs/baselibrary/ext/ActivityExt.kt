@@ -1,5 +1,8 @@
 package com.bobs.baselibrary.ext
 
+import android.app.Activity
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -42,4 +45,18 @@ fun AppCompatActivity.toast(msgResID: Int, longToast: Boolean = false) {
         msgResID,
         if (longToast) Toast.LENGTH_LONG else Toast.LENGTH_SHORT
     ).show()
+}
+
+fun AppCompatActivity.showKeyboard(){
+    (getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager).toggleSoftInput(
+        InputMethodManager.SHOW_FORCED,
+        0
+    )
+}
+
+fun AppCompatActivity.hideKeyboard(){
+    (getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager).hideSoftInputFromWindow(
+        (currentFocus
+            ?: View(this)).windowToken, 0
+    )
 }
