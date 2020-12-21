@@ -1,5 +1,3 @@
-// 안쓰는건 그때그때 정리~
-
 ext.deps = [:]
 
 def versions = [:]

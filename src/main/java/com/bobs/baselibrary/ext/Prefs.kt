@@ -1,6 +1,7 @@
 package com.bobs.baselibrary.ext
 
 import android.content.SharedPreferences
+import android.content.SharedPreferences.Editor
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
@@ -24,7 +25,7 @@ private inline fun<T> SharedPreferences.delegate(
     key: String? = null,
     defaultValue: T,
     crossinline getter: SharedPreferences.(String,T)->T,
-    crossinline setter: SharedPreferences.Editor.(String, T) -> SharedPreferences.Editor
+    crossinline setter: Editor.(String, T) -> Editor
 ): ReadWriteProperty<Any, T> = object: ReadWriteProperty<Any,T>{
     override fun getValue(thisRef: Any, property: KProperty<*>): T =
         getter(key ?: property.name, defaultValue)!!
